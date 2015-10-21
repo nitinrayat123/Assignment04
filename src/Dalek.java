@@ -19,7 +19,8 @@ public class Dalek {
      * @param startCol 
      */
     public Dalek(int startRow, int startCol){
-         
+        row = startRow;
+        col = startCol;
     }
     
     
@@ -28,7 +29,10 @@ public class Dalek {
      * @param doc 
      */
     public void moveTowards(Doctor doc){
-        
+        if (hasCrashed == false) {
+            int docrow = doc.getRow();
+            int doccol = doc.getRow();
+        }
     }
     
     /**
