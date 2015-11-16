@@ -18,7 +18,6 @@ public class Doctor {
    public Doctor(int startRow, int startCol){
        row = startRow;
        col = startCol;
-       
    }
    
    /**
@@ -27,8 +26,16 @@ public class Doctor {
     * @param col 
     */
    public void move(int row, int col){
-       row = this.col;
-       col = this.col;
+       //if the click row and colum  is within 1 row and colum of the doctor move him to the that tile, 
+       //otherwise random a spot on the grid
+       if ( row > this.row +1 || col > this.col +1 || row < this.row-1 || col < this.col-1) {
+            this.row = (int) (Math.random() * 8);   
+            this.col = (int) (Math.random() * 8);
+       }else {
+           this.row = row;
+           this.col = col;
+       }
+       
    }
    
    /**
